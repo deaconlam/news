@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Reflections</title>
+            <link rel="stylesheet" href="wpnrw.css">
+            <script type="text/javascript" src="wpnrw.js"></script>
+        </head>
+        <body>
+            <div id="container1-custom">
+                <div id="center">
+                    <button class="button-hover" onclick="home()">Home</button>
+                    <button class="button-hover" onclick="global()">News</button>
+                    <button class="button-hover" onclick="reflections()">Reflections</button>
+                </div>
+            </div>
+            <div class="features">
+                <h1 class="features-title">Reflections</h1>
+                <button type="button" class="collapsible">Why did you decide to make this website (why a tech news for example?)</button>
+                <div class="content">
+                    <p>It is a website with global, sport and travel news. I chose these three topics because I decided to use BBC as the news source and it provides these three topics that is in the marking rubric ideas.</p>
+                </div>
+                <button type="button" class="collapsible">Which section of your website are you most proud of and why?</button>
+                <div class="content">
+                    <p>The widgets and the grid view when window size is >1440px because it is useful and I like it too.</p>
+                </div>
+                <button type="button" class="collapsible">Which part took the longest for you to code?</button>
+                <div class="content">
+                    <p>The grid view because it requires a lot of debugging and fine adjustments.</p>
+                </div>
+                <button type="button" class="collapsible">How do you feel about coding now? Like it? Hate it?</button>
+                <div class="content">
+                    <p>I feel like it is more easier make certain things in html since I have the basic knowledge of it so I like it.</p>
+                </div>
+                <button type="button" class="collapsible">If we are done with the HTML unit, what other computer-related topics do you want to learn about?</button>
+                <div class="content">
+                    <p>C++ / C#.</p>
+                </div>
+                <a class="reflections-qa" href="wpnrw-features.html">See all features on this website</a>
+            </div>
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+                
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight){
+                      content.style.maxHeight = null;
+                    } else {
+                      content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                  });
+                }
+            </script>
+        </body>
+    </html>
